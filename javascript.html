@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label>valueOne</label>
+        <input type="number" name="valueOne" id="valueOne" placeholder="valueOne"><br><br>
+
+        <label>valueTwo</label>
+        <input type="number" name="valueTwo" id="valueTwo" placeholder="valueTwo"><br><br>
+
+        <button class="button" type="button" onClick="calculation('11');">+</button>
+        <button class="button" type="button" onClick="calculation('12');">-</button>
+        <button class="button" type="button" onClick="calculation('13');">x</button>
+        <button class="button" type="button" onClick="calculation('14');">/</button>
+    </form>
+
+    <script type="text/javascript">
+        function calculation(Opretion){
+            var valueOne = document.getElementById('valueOne').value;
+            var valueTwo = document.getElementById('valueTwo').value;
+            
+            valueOne = parseInt(valueOne);
+            valueTwo = parseInt(valueTwo);
+
+            alert("Aurthematic Opretion Are :-");
+
+            if(Opretion==11){
+                var sum = valueOne + valueTwo;
+                alert("summation of" +valueOne+ " and " +valueTwo+ " is " +sum+ ".");
+            }
+
+            if(Opretion==12){
+                var sub = valueOne - valueTwo;
+                alert("subraction of" +valueOne+ " and " +valueTwo+ " is " +sub+ ".");
+            }
+
+            if(Opretion==13){
+                var mul = valueOne * valueTwo;
+                alert("multiplication of" +valueOne+ " and " +valueTwo+ " is " +mul+ ".");
+            }
+
+            if(Opretion==14){
+                var div = valueOne / valueTwo;
+                alert("divition of" +valueOne+ " and " +valueTwo+ " is " +div+ ".");
+            }
+    
+        }
+    </script>
+</body>
+</html>
